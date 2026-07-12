@@ -354,15 +354,18 @@ a {
 }
 .book-cover {
   aspect-ratio: 5/7.5;
+  max-width: 320px;
+  margin: 0 auto;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
   position: relative;
+  background: var(--ink);
 }
 .book-cover img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
