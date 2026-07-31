@@ -26,7 +26,8 @@
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="assets/css/style.css">
 
 <!-- JSON-LD: Person -->
@@ -138,7 +139,10 @@
     <p class="eyebrow eyebrow-dark">The Book</p>
     <div class="book-grid">
       <div class="book-cover">
-        <img src="assets/img/book-cover.png" alt="Tracing the Yakthung book cover by Subash Limbu" loading="lazy">
+        <picture>
+          <source srcset="assets/img/book-cover.webp" type="image/webp">
+          <img src="assets/img/book-cover.png" alt="Tracing the Yakthung book cover by Subash Limbu" loading="lazy" width="640" height="960">
+        </picture>
       </div>
       <div class="book-copy">
         <h2>Tracing the Yakthung</h2>

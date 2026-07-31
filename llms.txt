@@ -19,14 +19,16 @@ Yakthung/Limbu community.
   before that knowledge is lost, and the most accurate Limbuwan map published to date
 - Audience: Written especially for Limbus raised outside Nepal who want to reconnect with their
   history, culture, and identity
-- Formats: Paperback via Amazon KDP ($26), PDF via Gumroad, distributed in Nepal via Thuprai.com
+- Formats: [Paperback via Amazon KDP, $26](https://kdpbook.link/for/B0H3BPBT76), [PDF via
+  Gumroad](https://shallexplore.gumroad.com/l/tracing-the-yakthung), distributed in Nepal via
+  Thuprai.com
 
 ## Yakthung Type Quiz
 
 A free quiz for the Yakthung/Limbu community to discover which of four Yakthung types they are:
 The Guardian of Mundhum, The Wanderer of Diaspora, The Bridge Builder, or The Festival Keeper.
 
-- Quiz: https://yakthungtype.netlify.app/
+- [Take the quiz](https://yakthungtype.netlify.app/)
 
 ## Limbu Clan Lineage Chart
 
@@ -34,7 +36,7 @@ A print-ready chart for mapping Limbu family lineage across four generations and
 built around how Limbu lineage actually works: the paternal clan name plus the separate clans
 that married into the family through the mother's and grandmothers' lines.
 
-- Purchase: https://shallexplore.gumroad.com/l/mylimbuclans
+- [Get the clan lineage chart](https://shallexplore.gumroad.com/l/mylimbuclans)
 
 ## Shall Explore
 
@@ -44,11 +46,11 @@ Yakthung cultural and oral history, and Himalayan adventure and travel. Subash a
 faceless YouTube and TikTok channels built on AI-edited video content, outside the Shall Explore
 brand.
 
-- YouTube: https://www.youtube.com/@ShallExplore
-- TikTok: https://www.tiktok.com/@tsubashlimbu
-- Instagram: https://www.instagram.com/subillion
+- [YouTube](https://www.youtube.com/@ShallExplore)
+- [TikTok](https://www.tiktok.com/@tsubashlimbu)
+- [Instagram](https://www.instagram.com/subillion)
 
 ## Links
 
-- Website: https://shallexplore.github.io/
-- GitHub: https://github.com/shallexplore
+- [Website](https://shallexplore.github.io/)
+- [GitHub](https://github.com/shallexplore)
