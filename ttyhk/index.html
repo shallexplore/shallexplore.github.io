@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracing the Yakthung — Hong Kong Pre-Order</title>
+<meta name="description" content="Pre-order Tracing the Yakthung, a 40-page guide to Limbu identity and the Limbuwan map, with delivery or pickup in Hong Kong.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1b1712;
+    --ink-soft: #262019;
+    --parchment: #f3ecda;
+    --parchment-dim: #d9cfb3;
+    --brass: #b08d57;
+    --brass-deep: #8a6a3d;
+    --rust: #a6512b;
+    --line: rgba(243, 236, 218, 0.14);
+    --max: 640px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--parchment);
+    font-family: 'Fraunces', serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .mono { font-family: 'Space Mono', monospace; }
+
+  .band {
+    height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--brass) 0px, var(--brass) 10px,
+      transparent 10px, transparent 16px,
+      var(--rust) 16px, var(--rust) 22px,
+      transparent 22px, transparent 28px
+    );
+    opacity: 0.85;
+  }
+
+  header.hero { padding: 56px 0 36px; border-bottom: 1px solid var(--line); }
+
+  .preorder-badge {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    background: var(--brass);
+    padding: 6px 12px;
+    border-radius: 2px;
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-size: clamp(32px, 6.5vw, 48px);
+    font-weight: 600;
+    line-height: 1.12;
+    margin: 0 0 20px;
+    max-width: 13ch;
+  }
+
+  .lede {
+    font-size: 18px;
+    color: var(--parchment-dim);
+    max-width: 42ch;
+    margin: 0 0 28px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    background: var(--rust);
+    color: var(--parchment);
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 2px;
+    margin-bottom: 36px;
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+
+  .stat { min-width: 80px; }
+  .stat .num { font-family: 'Space Mono', monospace; font-size: 22px; color: var(--brass); display: block; }
+  .stat .label { font-size: 13px; color: var(--parchment-dim); }
+
+  section { padding: 44px 0; border-bottom: 1px solid var(--line); }
+
+  h2 { font-size: 22px; font-weight: 600; margin: 0 0 6px; }
+  .section-note { color: var(--parchment-dim); font-size: 15px; margin: 0 0 26px; }
+
+  .trust-strip {
+    display: grid;
+    gap: 14px;
+  }
+
+  .trust-strip .row {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    font-size: 16px;
+  }
+
+  .trust-strip .mark { font-family: 'Space Mono', monospace; color: var(--rust); flex-shrink: 0; }
+
+  .faq { display: grid; gap: 26px; }
+
+  .faq-item .q {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: var(--parchment);
+  }
+
+  .faq-item .a {
+    font-size: 16px;
+    color: var(--parchment-dim);
+    margin: 0;
+  }
+
+  .faq-item .a a { color: var(--brass); }
+
+  .timeline {
+    display: grid;
+    gap: 16px;
+  }
+
+  .timeline .round {
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--brass-deep);
+    padding: 14px 18px;
+    border-radius: 2px;
+  }
+
+  .timeline .round .when {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: var(--brass);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .timeline .round p { margin: 0; font-size: 15px; color: var(--parchment-dim); }
+
+  .order-form-frame {
+    width: 100%;
+    min-height: 900px;
+    border: 1px solid var(--line);
+    background: var(--parchment);
+    border-radius: 3px;
+  }
+
+  .payment-block {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  @media (max-width: 480px) { .payment-block { grid-template-columns: 1fr; } }
+
+  .qr-slot {
+    width: 160px; height: 160px;
+    background: var(--parchment);
+    border-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px; text-align: center; padding: 8px;
+  }
+
+  .payment-steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+
+  .payment-steps li {
+    counter-increment: step;
+    padding-left: 34px;
+    position: relative;
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+
+  .payment-steps li::before {
+    content: counter(step);
+    position: absolute; left: 0; top: 1px;
+    font-family: 'Space Mono', monospace; font-size: 13px;
+    color: var(--rust);
+    border: 1px solid var(--brass-deep);
+    width: 20px; height: 20px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+  }
+
+  .fulfil-note {
+    font-size: 14px; color: var(--parchment-dim);
+    margin-top: 18px; padding-top: 18px;
+    border-top: 1px dashed var(--line);
+  }
+
+  footer {
+    padding: 36px 0 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 14px;
+  }
+
+  footer .author { font-size: 15px; }
+  footer .handles { font-family: 'Space Mono', monospace; font-size: 13px; color: var(--brass); }
+</style>
+</head>
+<body>
+
+<div class="band"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="preorder-badge mono">Pre-order — Round 1</span>
+    <h1>The Most Accurate Limbuwan Map Ever Published Is Inside This Book</h1>
+    <p class="lede">Tracing the Yakthung is a 40-page guide that puts the labels used for Limbu identity under real scrutiny, from "Kirat" to "Mongolian," alongside a Limbuwan map more accurate than anything else out there. Pre-order now for Hong Kong.</p>
+    <a href="#order" class="cta-btn">Reserve my copy →</a>
+    <div class="stat-row mono">
+      <div class="stat">
+        <span class="num">40</span>
+        <span class="label">pages</span>
+      </div>
+      <div class="stat">
+        <span class="num">1</span>
+        <span class="label">Limbuwan map</span>
+      </div>
+      <div class="stat">
+        <span class="num">HK</span>
+        <span class="label">local pickup or delivery</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="trust">
+  <div class="wrap">
+    <h2>Why this book, why this author</h2>
+    <div class="trust-strip">
+      <div class="row"><span class="mark mono">→</span> @tsubashlimbu reaches 100,000+ views a month and is followed by notable voices in the Limbu community</div>
+      <div class="row"><span class="mark mono">→</span> 1,000+ comments on the author's Limbu clan research across TikTok and Instagram</div>
+      <div class="row"><span class="mark mono">→</span> The author also built a free Limbu identity quiz, tried by thousands</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Before you order</h2>
+    <p class="section-note">The questions people actually ask</p>
+    <div class="faq">
+      <div class="faq-item">
+        <p class="q">What's actually in the book?</p>
+        <p class="a">A short, practical guide to Limbuwan history and identity. It asks directly whether "Kirat," "Mongolian," and other commonly used labels for Limbu people hold up, and includes a Limbuwan map more accurate than anything else currently published.</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">Does it cover my specific clan?</p>
+        <p class="a">No. This book is a general guide to shared history and identity, not a clan-by-clan directory. If you want your own clan traced, the author's separate Limbu Clan Lineage Chart covers that in depth.</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">When will I actually get it?</p>
+        <p class="a">This is a pre-order. Round 1 copies dispatch or become available for pickup before December. Round 2 will be handed out in person in Hong Kong at Chasok Tangnam this December, for anyone who wants to collect there instead.</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">How do I pay, and is it safe?</p>
+        <p class="a">Submit the order form below, then pay by FPS or PayMe using the QR code shown after. No card details, no third-party checkout.</p>
+      </div>
+      <div class="faq-item">
+        <p class="q">Why trust the research?</p>
+        <p class="a">The author has spent years tracing Limbu clan lineage directly from community sources, with reach and engagement that outpaces most existing references on the subject.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="wrap">
+    <h2>Two ways to receive it</h2>
+    <div class="timeline">
+      <div class="round">
+        <span class="when mono">ROUND 1 — BEFORE DECEMBER</span>
+        <p>Pre-order now. Dispatch or pickup details confirmed after payment, delivered before December.</p>
+      </div>
+      <div class="round">
+        <span class="when mono">ROUND 2 — DECEMBER, IN PERSON</span>
+        <p>Collect your copy face to face at Chasok Tangnam, Hong Kong.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <h2>Reserve your copy</h2>
+    <p class="section-note">Quantity, contact, and delivery or pickup. Under a minute.</p>
+    <!-- Replace src below with your Google Form's published /viewform URL, plus ?embedded=true -->
+    <iframe class="order-form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSeqOvEuvyBhG61vxf5E6R1-El8JiDtsYHUgMFcimwo5g_axOw/viewform?embedded=true" title="Tracing the Yakthung order form">Loading order form…</iframe>
+  </div>
+</section>
+
+<section id="pay">
+  <div class="wrap">
+    <h2>Pay by FPS / PayMe</h2>
+    <p class="section-note">Complete payment after submitting the form above.</p>
+    <div class="payment-block">
+      <div class="qr-slot">QR code<br>goes here</div>
+      <ol class="payment-steps">
+        <li>Open FPS or PayMe on your phone</li>
+        <li>Scan the QR code</li>
+        <li>Enter the amount shown on your order confirmation</li>
+        <li>Screenshot your receipt and keep it until you receive your copy</li>
+      </ol>
+    </div>
+    <p class="fulfil-note">Your order is confirmed once payment is received. Round 1 or Round 2 details follow by the contact number you provided.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; width:100%;">
+    <div class="author">Author: Subash Limbu</div>
+    <div class="handles">@ShallExplore · @tsubashlimbu · #TracingTheYakthung</div>
+  </div>
+</footer>
+
+</body>
+</html>
