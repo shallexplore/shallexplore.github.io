@@ -181,9 +181,12 @@
     background: var(--parchment);
     border-radius: 3px;
     display: flex; align-items: center; justify-content: center;
-    color: var(--ink);
-    font-family: 'Space Mono', monospace;
-    font-size: 12px; text-align: center; padding: 8px;
+    overflow: hidden;
+  }
+
+  .qr-slot img {
+    width: 100%; height: 100%;
+    object-fit: contain;
   }
 
   .payment-steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
@@ -310,6 +313,9 @@
   <div class="wrap">
     <h2>Reserve your copy</h2>
     <p class="section-note">Quantity, contact, and delivery or pickup. Under a minute.</p>
+    <p class="section-note" style="margin-top:-14px; margin-bottom:26px;">
+      Prefer to skip the form? <a href="https://wa.me/85296341174?text=Hi%2C%20I%27d%20like%20to%20pre-order%20Tracing%20the%20Yakthung" style="color:var(--brass);">Order directly on WhatsApp →</a>
+    </p>
     <!-- Replace src below with your Google Form's published /viewform URL, plus ?embedded=true -->
     <iframe class="order-form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSeqOvEuvyBhG61vxf5E6R1-El8JiDtsYHUgMFcimwo5g_axOw/viewform?embedded=true" title="Tracing the Yakthung order form">Loading order form…</iframe>
   </div>
@@ -319,12 +325,14 @@
   <div class="wrap">
     <h2>Pay by FPS / PayMe</h2>
     <p class="section-note">Complete payment after submitting the form above.</p>
+    <p class="section-note" style="margin-bottom:6px;">Price: <strong style="color:var(--brass);">HK$180 per copy</strong>. FPS/PayMe won't show this automatically, multiply by your order quantity and enter that total yourself.</p>
+    <p class="section-note" style="margin-bottom:14px; font-style:italic;">Cheaper than ordering from Amazon US, and no import wait.</p>
     <div class="payment-block">
-      <div class="qr-slot">QR code<br>goes here</div>
+      <div class="qr-slot"><img src="/assets/ttyhk-fps-qr.jpg" alt="Scan to pay via FPS"></div>
       <ol class="payment-steps">
         <li>Open FPS or PayMe on your phone</li>
         <li>Scan the QR code</li>
-        <li>Enter the amount shown on your order confirmation</li>
+        <li>Enter your total (price per copy × quantity)</li>
         <li>Screenshot your receipt and keep it until you receive your copy</li>
       </ol>
     </div>
