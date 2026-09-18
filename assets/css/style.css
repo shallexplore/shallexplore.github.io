@@ -124,6 +124,14 @@ a {
   padding: var(--space-3) var(--space-4);
 }
 
+/* Used on pages with no dark hero (Notes index, note pages) so the nav
+   has a solid background to sit on instead of overlaying nothing. */
+.site-header-static {
+  position: sticky;
+  top: 0;
+  background: var(--ink);
+}
+
 .wordmark {
   font-family: var(--font-mono);
   font-weight: 700;
@@ -145,6 +153,7 @@ a {
   transition: color 0.2s ease;
 }
 .site-nav a:hover { color: var(--brass-bright); }
+.site-nav a.is-current { color: var(--brass-bright); }
 
 @media (max-width: 640px) {
   .site-nav { gap: var(--space-2); }
@@ -406,6 +415,40 @@ a {
   opacity: 0.7;
 }
 
+/* Amazon review pull-quote, sits in the dark book section */
+.review-card {
+  margin: var(--space-3) 0 0;
+  padding: var(--space-2) var(--space-3);
+  border-left: 2px solid var(--brass);
+  max-width: 32rem;
+}
+.review-stars {
+  color: var(--brass-bright);
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+.review-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--parchment);
+  margin-bottom: 0.5rem;
+}
+.review-body {
+  color: var(--parchment-dim);
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+}
+.review-attr {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--parchment-dim);
+  opacity: 0.8;
+}
+
 @media (max-width: 780px) {
   .book-grid { grid-template-columns: 1fr; }
   .book-cover { max-width: 260px; margin: 0 auto; }
@@ -471,6 +514,16 @@ a {
 .type-badges a:hover {
   background: rgba(192,139,60,0.3);
   border-color: var(--brass);
+}
+
+/* "Pay what you feel" label under the clan chart CTA */
+.price-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--juniper);
+  margin-top: 0.4rem;
 }
 
 @media (max-width: 780px) {
@@ -560,6 +613,81 @@ a {
   opacity: 0.7;
   margin-bottom: var(--space-3);
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-align: left;
+  margin-top: var(--space-3);
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.form-field label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brass-dark);
+}
+.form-field input, .form-field textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid rgba(20,24,31,0.2);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.5);
+  color: var(--ink);
+  resize: vertical;
+}
+.form-field input:focus, .form-field textarea:focus {
+  outline: 2px solid var(--brass);
+  outline-offset: 1px;
+  border-color: var(--brass);
+}
+.contact-form .btn {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+}
+.contact-alt {
+  margin-top: var(--space-2);
+  font-size: 0.85rem;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.contact-email {
+  font-family: var(--font-mono);
+  color: var(--ink);
+}
+.copy-btn {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--madder);
+  background: none;
+  border: 1px solid var(--madder);
+  border-radius: var(--radius);
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.copy-btn:hover { background: var(--madder); color: var(--parchment); }
+.copy-btn.is-copied {
+  background: var(--juniper);
+  border-color: var(--juniper);
+  color: var(--parchment);
+}
+
 .social-grid {
   list-style: none;
   display: flex;
@@ -583,6 +711,126 @@ a {
 .social-grid a:hover {
   color: var(--madder);
   border-color: var(--madder);
+}
+
+/* ============================================
+   NOTES (index + individual note pages)
+   ============================================ */
+.notes-hero {
+  background: var(--ink);
+  color: var(--parchment);
+  padding: var(--space-5) var(--space-2) var(--space-4);
+  text-align: center;
+}
+.notes-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: var(--space-1) 0 var(--space-2);
+}
+.notes-hero-sub {
+  color: var(--parchment-dim);
+  max-width: 34rem;
+  margin: 0 auto;
+}
+
+.notes-list {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.note-card {
+  border-bottom: 1px solid rgba(20,24,31,0.12);
+  padding-bottom: var(--space-3);
+}
+.note-date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass-dark);
+  margin-bottom: 0.4rem;
+}
+.note-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.note-card h2 a:hover { color: var(--madder); }
+.note-excerpt {
+  opacity: 0.75;
+  margin-bottom: var(--space-1);
+}
+.note-link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--madder);
+}
+.note-link:hover { text-decoration: underline; }
+
+.note-page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-2);
+}
+.note-back {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brass-dark);
+  display: inline-block;
+  margin-bottom: var(--space-3);
+}
+.note-back:hover { color: var(--madder); }
+.note-page h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 0.3rem 0 var(--space-1);
+}
+.note-page-date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-bottom: var(--space-3);
+}
+.note-page-intro {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-3);
+}
+.note-page-outro {
+  margin-top: var(--space-3);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.fav-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-3) 0;
+  font-size: 0.95rem;
+}
+.fav-table th, .fav-table td {
+  text-align: left;
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid rgba(20,24,31,0.12);
+  vertical-align: top;
+}
+.fav-table th {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--brass-dark);
+  width: 40%;
+  font-weight: 700;
+}
+.fav-table tr:last-child th, .fav-table tr:last-child td { border-bottom: none; }
+
+@media (max-width: 640px) {
+  .fav-table th, .fav-table td { padding: 0.6rem 0.5rem; font-size: 0.88rem; }
+  .fav-table th { width: 45%; }
 }
 
 /* ============================================
