@@ -849,7 +849,7 @@ a {
 .site-footer p:last-child {
   font-size: 0.8rem;
 }
-.work-title { font-family: 'Fraunces', serif; margin: 0 0 2rem; }
+.extras .work-title { font-family: 'Fraunces', serif; margin: 0 0 2rem; } { font-family: 'Fraunces', serif; margin: 0 0 2rem; }
 .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
 .work-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
 @media (max-width: 700px) {
