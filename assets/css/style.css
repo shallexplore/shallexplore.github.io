@@ -871,7 +871,8 @@ a {
   .site-nav a {
     font-size: 0.72rem;
     letter-spacing: 0.08em;
-  }
+  } 
+}
 #work .work-subhead {
   display: block;
   margin: 4rem 0 1.5rem;
