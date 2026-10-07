@@ -888,3 +888,5 @@ a {
    .footer-links { display: flex; justify-content: center; gap: var(--space-3); flex-wrap: wrap; }
    .footer-links a { color: var(--parchment-dim); text-decoration: underline; text-underline-offset: 3px; }
    .footer-links a:hover { color: var(--brass-bright); }
+
+      .extra-card p.eyebrow { opacity: 1; }
