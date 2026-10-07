@@ -23,4 +23,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://shallexplore.github.io/sitemap.xml
+Sitemap: https://subashlimbu.com/sitemap.xml

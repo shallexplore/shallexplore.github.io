@@ -2,23 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://subashlimbu.com/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-07</lastmod>
   </url>
   <url>
-    <loc>https://subashlimbu.com/notes/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://subashlimbu.com/notes/prioritiser-productivity-type</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://subashlimbu.com/notes/about-me</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://subashlimbu.com/blog/</loc>
+    <lastmod>2026-10-07</lastmod>
   </url>
 </urlset>
