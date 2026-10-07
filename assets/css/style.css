@@ -872,4 +872,7 @@ a {
     font-size: 0.72rem;
     letter-spacing: 0.08em;
   }
+}.work-subhead {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
