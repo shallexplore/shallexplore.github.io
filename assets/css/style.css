@@ -854,7 +854,7 @@ a {
 .work-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
 @media (max-width: 700px) {
   .work-grid { grid-template-columns: 1fr; }
-  
+
 }.wordmark,
 .site-nav a {
   white-space: nowrap;
@@ -862,7 +862,7 @@ a {
 
 @media (max-width: 600px) {
   .site-header {
-    flex-wrap: wrap;
+    flex-wrap: wrap;  
     row-gap: 8px;
   }
   .site-nav {
