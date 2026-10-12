@@ -24,3 +24,5 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://subashlimbu.com/sitemap.xml
+Sitemap: https://subashlimbu.com/sitemap.xml
+Sitemap: https://subashlimbu.com/blog/sitemap-index.xml
