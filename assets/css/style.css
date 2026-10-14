@@ -28,9 +28,6 @@
 
 * { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -891,3 +888,6 @@ a {
    .footer-links a:hover { color: var(--brass-bright); }
 
       .extra-card p.eyebrow { opacity: 1; }
+      html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
