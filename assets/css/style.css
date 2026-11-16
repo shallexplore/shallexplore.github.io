@@ -865,6 +865,8 @@ a {
   .site-header {
     flex-wrap: wrap;  
     row-gap: 8px;
+  .site-nav .nav-pill { display: none; }
+  .hero-eyebrow { letter-spacing: 0.1em; font-size: 0.66rem; }
   }
   .site-nav {
     gap: 14px;
@@ -1044,3 +1046,17 @@ html { scroll-padding-top: 80px; }
 
 /* Closing CTA */
 .contact h2 { font-size: clamp(2.2rem, 6vw, 4rem); }
+
+/* Header alignment fix */
+.site-header { align-items: center; }
+.site-nav { align-items: center; }
+.site-nav a,
+.site-nav .nav-pill { line-height: 1; }
+
+@media (max-width: 600px) {
+  .site-header { flex-wrap: nowrap; padding: var(--space-2) 0.9rem; }
+  .site-nav { gap: 0.8rem; }
+  .site-nav a { font-size: 0.62rem; letter-spacing: 0.06em; }
+  .site-nav .nav-pill { padding: 0.4rem 0.7rem; }
+  .wordmark { font-size: 0.8rem; }
+}
