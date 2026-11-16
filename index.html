@@ -30,7 +30,7 @@
 <link rel="stylesheet" href="assets/css/style.css">
 
 
-<<!-- JSON-LD: Person -->
+<!-- JSON-LD: Person -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,16 +87,23 @@
   <a class="wordmark" href="#top">S. LIMBU</a>
   <nav class="site-nav" aria-label="Primary">
     <a href="#work">Work</a>
-    <a href="#book">Book</a>
+    <a href="#explore">Explore</a>
     <a href="/blog/">Blog</a>
-    <a href="#contact">Connect</a>
+    <a class="nav-pill" href="#contact">Let's talk</a>
   </nav>
 </header>
 
 <main id="main">
 
-  <!-- HERO -->
+    <!-- HERO -->
   <section id="top" class="hero">
+    <!-- Optional reel: uncomment once assets/video/hero.mp4 exists (under 5 MB, muted loop)
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/img/hero-poster.jpg">
+      <source src="assets/video/hero.mp4" type="video/mp4">
+    </video>
+    -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
     <div class="contour-field" aria-hidden="true">
       <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
         <path class="contour c1" d="M-50,600 C150,500 250,650 400,580 C550,510 650,600 800,540 C950,480 1050,560 1250,500" />
@@ -106,43 +113,72 @@
       </svg>
     </div>
 
+    <p class="eyebrow eyebrow-dark hero-eyebrow">Content strategist · Web3 community lead · Author</p>
     <h1 class="hero-name">Subash&nbsp;Limbu</h1>
-<p class="hero-role">Content creator, author and marketer.<br>AI · Web3 · Crypto<br>Creator of Shall&nbsp;Explore.</p>    <p class="hero-sub">Seventeen countries in, still chasing what most people scroll past.</p>
+    <p class="hero-role">Stories that grow brands.<br>Communities that last.</p>
+    <p class="hero-sub">9+ years building audiences across YouTube, Web3 and consumer brands. Strategy, filming, AI editing and SEO under one roof, so ideas ship fast and actually connect.</p>
 
     <div class="cta-row">
-      <a class="btn btn-brass" href="#work">See the Work</a>
-      <a class="btn btn-outline" href="https://www.youtube.com/@ShallExplore" target="_blank" rel="noopener">Watch Shall Explore</a>
+      <a class="btn btn-brass" href="#work">See the work</a>
+      <a class="btn btn-outline" href="#contact">Let's talk</a>
     </div>
 
     <div class="scroll-cue" aria-hidden="true"><span></span></div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about">
-    <div class="about-grid">
-      <div class="about-mark" aria-hidden="true">SL</div>
-      <div class="about-copy">
-        <p class="eyebrow">About</p>
-        <p class="about-lead">
-          If you've scrolled past my work, you've probably seen it more than once, just never
-          known it was me. I've been in marketing since 2017 and entered the Web3 world in 2019.
-          Since then: a travel and wildlife channel, several faceless channels built on AI edits,
-          crypto memes, a book, a few free tools. Different formats, one instinct: find what
-          people are missing and hand it back in a way they'll actually watch.
-        </p>
-        <ul class="stat-row">
-          <li><span class="stat-num">17</span> <span class="stat-label">Countries explored</span></li>
-          <li><span class="stat-num">HK · KTM · UK</span> <span class="stat-label">Based across three bases</span></li>
-          <li><span class="stat-num">1,000+ videos</span> <span class="stat-label">Across 3 platforms</span></li>
+  <!-- PROOF STRIP -->
+  <section class="proof" aria-label="Highlights">
+    <ul class="proof-grid">
+      <li><span class="proof-num count">1,000+</span><span class="proof-label">Videos published</span></li>
+      <li><span class="proof-num">Millions</span><span class="proof-label">Organic views</span></li>
+      <li><span class="proof-num count">9+</span><span class="proof-label">Years building audiences</span></li>
+      <li><span class="proof-num">2019</span><span class="proof-label">Leading Web3 growth</span></li>
+    </ul>
+    <p class="proof-platforms">
+      <span class="eyebrow eyebrow-dark">Where the work lives</span>
+      <span>YouTube</span><span>Instagram</span><span>TikTok</span><span>Amazon</span><span>Gumroad</span>
+    </p>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement">
+    <p>Most brands struggle because strategy and execution live in separate silos. I run the full creative and growth loop, so ideas ship fast and <em>actually connect.</em></p>
+  </section>
+
+  <!-- WHAT I'VE BUILT -->
+  <section class="build">
+    <p class="eyebrow">What I've built</p>
+    <h2 class="build-title">From zero to millions of organic views</h2>
+    <div class="build-grid">
+      <article class="build-col">
+        <h3>Shall Explore</h3>
+        <ul>
+          <li>1,000+ videos across YouTube, Instagram and TikTok</li>
+          <li>Millions of organic views</li>
+          <li>Travel, wildlife and heritage storytelling across 17 countries</li>
         </ul>
-      </div>
+      </article>
+      <article class="build-col">
+        <h3>Web3 and crypto</h3>
+        <ul>
+          <li>Led global marketing and community growth for blockchain brands since 2019</li>
+          <li>Memes and content that speak crypto fluently and get shared</li>
+        </ul>
+      </article>
+      <article class="build-col">
+        <h3>Systems and publishing</h3>
+        <ul>
+          <li>End-to-end pipelines: strategy, filming, AI-assisted editing, SEO</li>
+          <li>Multiple books published on Amazon and Gumroad</li>
+        </ul>
+      </article>
     </div>
   </section>
 
     <!-- WORK -->
   <section id="work" class="extras">
     <p class="eyebrow eyebrow-dark">Work</p>
-    <h2 class="work-title">Let's build together</h2>
+    <h2 class="work-title">What we can build together</h2>
     <div class="extras-grid work-grid">
 
       <article class="extra-card">
@@ -199,9 +235,17 @@
 
     </div>
   </section>
+  <!-- EXPLORE BANNER -->
+  <section class="explore-banner" aria-label="Shall Explore">
+    <div class="explore-banner-inner">
+      <p class="eyebrow eyebrow-dark">Shall Explore</p>
+      <h2 class="explore-banner-title">Every place has a story underneath it.</h2>
+      <a class="btn btn-outline" href="https://www.youtube.com/@ShallExplore" target="_blank" rel="noopener">Watch on YouTube</a>
+    </div>
+  </section>
+
   <!-- SHALL EXPLORE -->
   <section id="explore" class="explore">
-    <p class="eyebrow">Shall Explore</p>
     <h2 class="explore-title">Adventure with a memory</h2>
     <div class="pillar-grid">
       <article class="pillar">
@@ -226,8 +270,8 @@
   <!-- CONTACT / SOCIALS -->
   <section id="contact" class="contact">
     <p class="eyebrow">Connect</p>
-    <h2>Let's work together</h2>
-    <p class="contact-sub">Open to collaborations, brand partnerships, and press. Say hello.</p>
+        <h2>Let's build together</h2>
+    <p class="contact-sub">Founders, brands and creative teams: tell me what you're building.</p>
 
     <form class="contact-form" action="https://formspree.io/f/xppwzgqe" method="POST">
       <div class="form-field">

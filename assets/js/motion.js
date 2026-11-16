@@ -47,9 +47,10 @@
     nameTarget = nameEl.querySelectorAll('.char');
   }
 
-  /* Hero intro */
+    /* Hero intro */
   gsap.timeline({ defaults: { ease: 'power3.out' } })
-    .from(nameTarget, { y: 50, opacity: 0, duration: 0.8, stagger: LETTER_STAGGER })
+    .from('.hero-eyebrow', { y: 16, opacity: 0, duration: 0.6 })
+    .from(nameTarget, { y: 50, opacity: 0, duration: 0.8, stagger: LETTER_STAGGER }, '-=0.3')
     .from('.hero-role', { y: 24, opacity: 0, duration: 0.7 }, '-=0.4')
     .from('.hero-sub', { y: 20, opacity: 0, duration: 0.6 }, '-=0.4')
     .from('.cta-row .btn', { y: 20, opacity: 0, duration: 0.6, stagger: 0.1 }, '-=0.3');
@@ -62,9 +63,11 @@
   });
 
   /* Scroll reveals, staggered in batches */
-  const reveal = [
-    '.about-lead', '.stat-row li',
+      const reveal = [
+    '.proof-grid li', '.proof-platforms', '.statement p',
+    '.build-title', '.build-col',
     '.work-title', '.work-subhead', '.extra-card',
+    '.explore-banner-inner',
     '.explore-title', '.pillar',
     '.contact h2', '.contact-sub', '.contact-form'
   ].join(',');
@@ -81,7 +84,7 @@
   });
 
   /* Stat count-up (only numbers; "HK · KTM · UK" is skipped automatically) */
-  document.querySelectorAll('.stat-num').forEach((el) => {
+    document.querySelectorAll('.proof-num.count').forEach((el) => {
     const m = el.textContent.trim().match(/^([\d,]+)(.*)$/);
     if (!m) return;
     const end = parseInt(m[1].replace(/,/g, ''), 10);
