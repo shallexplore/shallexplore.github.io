@@ -1049,14 +1049,17 @@ html { scroll-padding-top: 80px; }
 
 /* Header alignment fix */
 .site-header { align-items: center; }
-.site-nav { align-items: center; }
-.site-nav a,
-.site-nav .nav-pill { line-height: 1; }
+.site-header .site-nav { align-items: center; }
+.site-nav a { line-height: 1; }
 
 @media (max-width: 600px) {
-  .site-header { flex-wrap: nowrap; padding: var(--space-2) 0.9rem; }
-  .site-nav { gap: 0.8rem; }
-  .site-nav a { font-size: 0.62rem; letter-spacing: 0.06em; }
-  .site-nav .nav-pill { padding: 0.4rem 0.7rem; }
-  .wordmark { font-size: 0.8rem; }
+  .site-header { flex-wrap: nowrap; padding: 1rem 0.9rem; }
+  .site-nav { gap: 1rem; }
+  .site-nav a { font-size: 0.68rem; letter-spacing: 0.06em; }
+  .site-nav .nav-pill { display: none; }
+  .wordmark { font-size: 0.85rem; }
+  .hero-eyebrow { font-size: 0.66rem; letter-spacing: 0.1em; }
 }
+
+/* "Find my work on" row: label on its own line */
+.proof-platforms .eyebrow { width: 100%; text-align: center; }
